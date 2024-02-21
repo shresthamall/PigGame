@@ -32,6 +32,9 @@ dice.classList.add('hidden');
 
 // function declarations
 
+document.getElementById('name--0').textContent = prompt('Player 1 name:');
+document.getElementById('name--1').textContent = prompt('Player 2 name:');
+
 // generate random dice roll and call displayDiceRoll() to change dice img in-game
 const rollDice = function () {
   let roll = Math.trunc(Math.random() * 6) + 1;
@@ -52,10 +55,10 @@ function switchPlayer() {
   player1.classList.toggle('player--active');
   if (activePlayer === 0) {
     activePlayer = 1;
-    currScore1Elm.textContent = 0;
+    currScore0Elm.textContent = 0;
   } else {
     activePlayer = 0;
-    currScore0Elm.textContent = 0;
+    currScore1Elm.textContent = 0;
   }
   currScore = 0;
 }
